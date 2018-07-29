@@ -1,0 +1,49 @@
+
+
+<html>
+
+	<head>
+		<meta name="author" content="Sampo Pelto">
+		<meta name="description" content="Simple mobile-friendly Magic the Cathering life counter website">
+		<meta name="keywords" content="MTG,mtg,MagicTheCathering,Lifecounter">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>Life</title>
+		<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+	</head>
+	
+	<body>
+		<div class="content">
+			<h2 id="pointud">20</h2>
+			<h2 id="point">20</h2>
+			<span id="plustext">+</span>
+			<span id="minustext">-</span>
+			<hr>
+			<input onclick="add(1)" type="button" id="plus"/>
+			<input onclick="add(-1)" type="button" id="minus"/>
+		</div>
+	<script>
+const bgcolor = ["#ED7979", "#9D9D9D", "#67ADE2", "#EFEFEF", "#86DF6D"];
+//red black blue white green
+
+document.documentElement.style.setProperty("--bgcolor", bgcolor[Math.floor(Math.random() * bgcolor.length)]);
+
+let life = 20;
+
+function add(num) {
+    life = life + num;
+	
+	if (life <= 0){
+	document.getElementById("point").innerHTML = "DEAD";
+	document.getElementById("pointud").innerHTML = "DEAD";
+	}
+	else{
+	document.getElementById("point").innerHTML = life.toString();
+	document.getElementById("pointud").innerHTML = life.toString();
+	}
+}
+	</script>
+		</body>	
+</html>
