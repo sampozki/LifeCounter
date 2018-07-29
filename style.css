@@ -19,44 +19,8 @@ h2{
 	
 }
 
-h3{
-	font-family:"Raleway", sans-serif, cursive;
-	font-size:60px;
-	color:#111;
-	text-shadow: #333 0 0 1px; 
-	
-}
-
-.header{
-}
-
-#navbar {
-  overflow: hidden;
-  background-color: #2B6D12;
-}
-
-#navbar h3 {
-  float: middle;
-  display: block;
-  color: #ddd;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: #ddd 0 0 2px; 
-}
-
 .content {
   padding: 0px;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  
-}
-
-.sticky + .content {
-  padding-top: 140px;
 }
 
 span{
@@ -130,8 +94,8 @@ hr{
 	width:90%;
 	left:5%;
 	display: block;
-    border: 0;
-    border-top: 2px solid #000;
+	border: 0;
+	border-top: 2px solid #000;
 	transform:translate(0,-50%);
 	opacity:0.1;
 }
