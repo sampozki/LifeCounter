@@ -5,7 +5,7 @@
 body{
 	text-align:center;
 	margin: 0px;
-    padding: 0px;
+	padding: 0px;
 	background-color:var(--bgcolor);
 	overflow:hidden;
 }
@@ -20,7 +20,7 @@ h2{
 }
 
 .content {
-  padding: 0px;
+	padding: 0px;
 }
 
 span{
@@ -49,8 +49,8 @@ input:focus {
 	position:absolute;
 	bottom:2%;
 	transform:translate(-50%,0);
-    border: none;
-    outline:none;
+	border: none;
+	outline:none;
 	background-color:transparent;
 }
 
@@ -59,8 +59,8 @@ input:focus {
 	top:2%;
 	transform:translate(-50%,0);
 	background-color:transparent;
-    border: none;
-    outline:none;
+	border: none;
+	outline:none;
 }
 
 #pointud{
