@@ -3,7 +3,7 @@
 	<head>
 		<meta name="author" content="Sampo Pelto">
 		<meta name="description" content="Simple mobile-friendly Magic the Cathering life counter website">
-		<meta name="keywords" content="MTG,mtg,MagicTheCathering,Lifecounter">
+		<meta name="keywords" content="MTG,mtg,MagicTheGathering,Lifecounter">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<title>Life</title>
@@ -23,14 +23,22 @@
 			<input onclick="add(-1)" type="button" id="minus"/>
 		</div>
 	<script>
+
 const bgcolor = ["#ED7979", "#9D9D9D", "#67ADE2", "#EFEFEF", "#86DF6D"];
+const sccolor = ["#A74442", "#222222", "#455682", "#888888", "#4B853F"];
+
 //red black blue white green
 
-document.documentElement.style.setProperty("--bgcolor", bgcolor[Math.floor(Math.random() * bgcolor.length)]);
+let index = Math.floor(Math.random() * bgcolor.length);
+
+document.documentElement.style.setProperty("--bgcolor", bgcolor[index]);
+document.documentElement.style.setProperty("--sccolor", sccolor[index]);
+
 
 let life = 20;
 
 function add(num) {
+
     life = life + num;
 	
 	if (life <= 0){
