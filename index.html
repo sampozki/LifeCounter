@@ -1,6 +1,7 @@
 <html>
 
 	<head>
+	
 		<meta name="author" content="Sampo Pelto">
 		<meta name="description" content="Simple mobile-friendly Magic the Gathering life counter website">
 		<meta name="keywords" content="MTG,mtg,MagicTheGathering,Lifecounter">
@@ -15,45 +16,49 @@
 	<body>
 	
 		<div class="content">
+		
 			<h2 id="pointud">20</h2>
 			<h2 id="point">20</h2>
+			
 			<span id="plustext">+</span>
 			<span id="minustext">-</span>
+			
 			<hr>
+			
 			<input onclick="add(1)" type="button" id="plus"/>
 			<input onclick="add(-1)" type="button" id="minus"/>
+			
 		</div>
 		
 		<script>
 
-const bgcolor = ["#ED7979", "#9D9D9D", "#67ADE2", "#EFEFEF", "#86DF6D"];
-const sccolor = ["#A74442", "#222222", "#455682", "#888888", "#4B853F"];
+			const bgcolor = ["#ED7979", "#9D9D9D", "#67ADE2", "#EFEFEF", "#86DF6D"];
+			const sccolor = ["#A74442", "#222222", "#455682", "#888888", "#4B853F"];
+			//red black blue white green
 
-//red black blue white green
+			let index = Math.floor(Math.random() * bgcolor.length);
+			
+			document.documentElement.style.setProperty("--bgcolor", bgcolor[index]);
+			document.documentElement.style.setProperty("--sccolor", sccolor[index]);
 
-let index = Math.floor(Math.random() * bgcolor.length);
+			let life = 20;
 
-document.documentElement.style.setProperty("--bgcolor", bgcolor[index]);
-document.documentElement.style.setProperty("--sccolor", sccolor[index]);
+			function add(num) {
 
-
-let life = 20;
-
-function add(num) {
-
-    life = life + num;
+				life = life + num;
 	
-	if (life <= 0){
-	document.getElementById("point").innerHTML = "DEAD";
-	document.getElementById("pointud").innerHTML = "DEAD";
-	}
-	else{
-	document.getElementById("point").innerHTML = life.toString();
-	document.getElementById("pointud").innerHTML = life.toString();
-	}
-}
+				if (life <= 0){
+					document.getElementById("point").innerHTML = "DEAD";
+					document.getElementById("pointud").innerHTML = "DEAD";
+				}
+				else{
+					document.getElementById("point").innerHTML = life.toString();
+					document.getElementById("pointud").innerHTML = life.toString();
+				}
+			}
 
 		</script>
 		
 	</body>	
+	
 </html>
